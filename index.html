@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              mainColor: "#12524B",
+            },
+            fontFamily: {
+              manrope: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-4;
+      }
+    </style>
+  </head>
+  <body class="font-manrope">
+    <!-- Navbar -->
+    <nav class="fixed top-0 z-30 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow">
+      <div class="px-4 py-4 lg:px-5 lg:pl-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between w-full bg rtl:justify-end">
+            <!-- Hamburger Sidebar -->
+            <div class="flex justify-between items-center flex-1 sm:hidden">
+              <button
+                class="inline-flex items-center p-2 rounded-lg sm:hidden hover:bg-mainColor group text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                type="button"
+                data-drawer-target="drawer-navigation"
+                data-drawer-show="drawer-navigation"
+                aria-controls="drawer-navigation"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6 group-hover:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Logo -->
+            <a href="#" class="flex ms-2 flex-2 md:flex-1 md:basis-1/3">
+              <img src="/resource/logo.png" class="h-8 me-3" alt="Roadwave Logo" />
+            </a>
+            <ul class="hidden sm:flex flex-row font-bold rounded-lg rtl:space-x-reverse dark:bg-gray-800 text-sm md:basis-1/3">
+              <li>
+                <a href="#" class="block py-2 px-3 text-slate-600 rounded hover:text-mainColor dark:text-gray-400" aria-current="page">PRODUCT</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-slate-700 rounded hover:text-mainColor dark:text-gray-400">INFORMATION</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-slate-700 rounded hover:text-mainColor dark:text-gray-400">HELP</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-slate-700 rounded hover:text-mainColor dark:text-gray-400">SALE</a>
+              </li>
+            </ul>
+            <div class="flex justify-end items-center flex-1 sm:flex-none md:basis-1/3 md:ml-4">
+              <!-- Search Icon -->
+              <button
+                class="md:hidden inline-flex items-center p-2 text-slate-800 rounded-lg hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-slate-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 group"
+                type="button"
+                data-drawer-target=""
+                data-drawer-show=""
+                aria-controls=""
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+              </button>
+              <!-- Search -->
+              <div class="relative hidden md:block">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="search-navbar"
+                  class="block w-full p-1.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Cari produk..."
+                />
+              </div>
+              <!-- Cart -->
+              <button
+                class="inline-flex items-center p-2 text-slate-800 rounded-lg hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-slate-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-1 group"
+                type="button"
+                data-drawer-target=""
+                data-drawer-show=""
+                aria-controls=""
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-white">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="sm:inline-flex hidden items-center p-2 text-slate-800 rounded-lg hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-slate-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-1 group"
+                type="button"
+                data-drawer-target=""
+                data-drawer-show=""
+                aria-controls=""
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="drawer-navigation" class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+      <h5 id="drawer-navigation-label" class="font-extrabold text-mainColor uppercase font-manrope dark:text-gray-400 text-lg">Menu</h5>
+      <hr class="w-4/5 border rounded-full border-slate-300 outline-none mt-2" />
+      <button
+        type="button"
+        data-drawer-hide="drawer-navigation"
+        aria-controls="drawer-navigation"
+        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+      >
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <span class="sr-only">Close menu</span>
+      </button>
+      <div class="py-4 overflow-y-auto">
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" class="flex items-center p-2 text-slate-800 rounded-lg dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700 group font-manrope text-base active:bg-mainColor active:text-white">
+              <span class="ms-3">T-Shirt</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 text-slate-800 rounded-lg dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700 group font-manrope text-base active:bg-mainColor active:text-white">
+              <span class="ms-3">Shirt</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 text-slate-800 rounded-lg dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700 group font-manrope text-base active:bg-mainColor active:text-white">
+              <span class="ms-3">Pants</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 text-slate-800 rounded-lg dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700 group font-manrope text-base active:bg-mainColor active:text-white">
+              <span class="ms-3">Outwear</span>
+            </a>
+          </li>
+          <hr />
+          <li>
+            <a href="#" class="flex items-center p-2 text-slate-800 rounded-lg dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700 group font-manrope text-base active:bg-mainColor active:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+              <span class="ms-3">My Wish List</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 text-slate-800 rounded-lg dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700 group font-manrope text-base active:bg-mainColor active:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+              </svg>
+              <span class="ms-3">Information</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 text-slate-800 rounded-lg dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700 group font-manrope text-base active:bg-mainColor active:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
+                />
+              </svg>
+              <span class="ms-3">Help</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+
+    <div class="fixed bottom-0 left-0 z-30 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-800 dark:border-gray-600 md:hidden">
+      <div class="grid h-full max-w-lg grid-cols-5 mx-auto font-medium font-manrope">
+        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-0.5 text-slate-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+            />
+          </svg>
+
+          <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">Beranda</span>
+        </button>
+        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-0.5 text-slate-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+            />
+          </svg>
+          <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">Kategori</span>
+        </button>
+        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-0.5 text-slate-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+            />
+          </svg>
+          <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">Sale</span>
+        </button>
+        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-0.5 text-slate-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+            />
+          </svg>
+          <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">Transaksi</span>
+        </button>
+        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-0.5 text-slate-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+          </svg>
+
+          <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">Akun</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carosel -->
+
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative h-80 overflow-hidden md:h-[500px]">
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="/resource/image1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="/resource/image2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="/resource/image3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="/resource/image4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="/resource/image5.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+        </div>
+      </div>
+      <!-- Slider indicators -->
+      <div class="absolute z-20 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+      </div>
+      <!-- Slider controls -->
+      <button type="button" class="absolute top-0 start-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Toogle  -->
+    <div class="py-20 flex justify-center">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-0.5 cursor-pointer">
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <!-- Best Seller Product -->
+
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative h-56 overflow-hidden rounded-lg md:h-96 bg-slate-500">
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out bg-slate-400" data-carousel-item>
+          <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+        </div>
+      </div>
+      <!-- Slider indicators -->
+      <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+      </div>
+      <!-- Slider controls -->
+      <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Card -->
+
+    <div class="flex items-center py-5 px-3">
+      <!-- Items 1 -->
+      <div class="w-1/2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mr-1">
+        <a href="#">
+          <img class="p-2 rounded-t-lg" src="/image/IMG_8815.JPG" alt="product image" />
+        </a>
+        <div class="px-2 pb-2">
+          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
+          <a href="#">
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Nissan GTR</h5>
+          </a>
+          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
+            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
+              <p class="text-[11px] text-red-600">Rp</p>
+              <p class="text-[11px] text-red-600">90.000</p>
+              <p class="text-[11px]"><s>Rp</s></p>
+              <p class="text-[11px]"><s>90.000</s></p>
+            </div>
+            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border">20%</span>
+          </div>
+        </div>
+      </div>
+      <!-- Items 2 -->
+      <div class="w-1/2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border ml-1">
+        <a href="#">
+          <img class="p-2 rounded-t-lg" src="/image/IMG_8815.JPG" alt="product image" />
+        </a>
+        <div class="px-2 pb-2">
+          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
+          <a href="#">
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Nissan GTR</h5>
+          </a>
+          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
+            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
+              <p class="text-[11px] text-red-600">Rp</p>
+              <p class="text-[11px] text-red-600">90.000</p>
+              <p class="text-[11px]"><s>Rp</s></p>
+              <p class="text-[11px]"><s>90.000</s></p>
+            </div>
+            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border">20%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <script src="https://kit.fontawesome.com/cbaed131ab.js" crossorigin="anonymous"></script>
+    <div class="mb-96"></div>
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
