@@ -15,6 +15,9 @@
           extend: {
             colors: {
               mainColor: "#12524B",
+              mainColorOld: "#0d3d40",
+              darkmodeBg: "#121b22",
+              darkmodeOther: "#1f2c34",
             },
             fontFamily: {
               manrope: ["Manrope"],
@@ -29,9 +32,9 @@
       }
     </style>
   </head>
-  <body class="font-manrope">
+  <body class="font-manrope dark:bg-darkmodeBg">
     <!-- Navbar -->
-    <nav class="fixed top-0 z-[80] w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow">
+    <nav class="fixed top-0 z-[80] w-full bg-white border-b border-gray-200 dark:bg-darkmodeOther dark:border-gray-700 shadow">
       <div class="px-4 py-4 lg:px-10">
         <div class="flex items-center justify-between">
           <div class="flex items-center justify-between w-full bg rtl:justify-end">
@@ -147,7 +150,7 @@
     </nav>
 
     <!-- Sidebar -->
-    <div id="drawer-navigation" class="fixed top-0 left-0 z-[81] w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+    <div id="drawer-navigation" class="fixed top-0 left-0 z-[81] w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-darkmodeOther" tabindex="-1" aria-labelledby="drawer-navigation-label">
       <h5 id="drawer-navigation-label" class="font-extrabold text-mainColor uppercase font-manrope dark:text-gray-400 text-lg">Menu</h5>
       <hr class="w-4/5 border rounded-full border-slate-300 outline-none mt-2" />
       <button
@@ -222,7 +225,7 @@
 
     <!-- Bottom Bar -->
 
-    <div class="fixed bottom-0 left-0 z-30 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-800 dark:border-gray-600 lg:hidden">
+    <div class="fixed bottom-0 left-0 z-30 w-full h-16 bg-white border-t border-gray-200 dark:bg-darkmodeOther dark:border-gray-600 lg:hidden">
       <div class="grid h-full max-w-lg grid-cols-5 mx-auto font-medium font-manrope">
         <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-0.5 text-slate-500 dark:text-gray-400 group-hover:text-mainColor dark:group-hover:text-mainColor">
@@ -275,7 +278,7 @@
     <nav class="flex mt-24 px-10 md:px-14 mb-7" aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li class="inline-flex items-center">
-          <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-mainColor dark:text-gray-400 dark:hover:text-white">
+          <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-600 dark:text-gray-200 dark:hover:text-white">
             <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
               <path
                 d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
@@ -289,7 +292,7 @@
             <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
             </svg>
-            <a href="#" class="ms-1 text-sm font-medium text-gray-700 hover:text-mainColor md:ms-2 dark:text-gray-400 dark:hover:text-white">Information</a>
+            <a href="#" class="ms-1 text-sm font-medium text-gray-700 hover:text-gray-600 md:ms-2 dark:text-gray-200 dark:hover:text-white">Information</a>
           </div>
         </li>
         <li aria-current="page">
@@ -319,7 +322,7 @@
           <a href="informationKHC.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Kebijakan Hak Cipta</a>
         </li>
         <li class="me-2">
-          <a href="#" aria-current="page" class="inline-block p-4 text-white bg-mainColor rounded-t-lg active dark:bg-gray-800 dark:text-white">Syarat & Ketentuan Berlaku</a>
+          <a href="#" aria-current="page" class="inline-block p-4 text-white bg-mainColor rounded-t-lg active dark:bg-mainColor dark:text-white">Syarat & Ketentuan Berlaku</a>
         </li>
         <li class="me-2">
           <a href="informationA.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Aturan</a>
@@ -328,12 +331,12 @@
 
       <!-- Content -->
       <div class="px-10 md:px-14 py-5 mb-5">
-        <h3 class="text-3xl font-semibold text-slate-700 mb-10 dark:text-gray-800 mt-5">Syarat dan Ketentuan</h3>
+        <h3 class="text-3xl font-semibold text-slate-700 mb-10 dark:text-gray-200 mt-5">Syarat dan Ketentuan</h3>
         <p class="mb-3 text-gray-500 dark:text-gray-400 px-1 text-justify">
           Selamat datang di situs roadwaveapparel.com. Mohon membaca Ketentuan Penggunaan ini dengan seksama. Ketentuan Penggunaan ini mengatur penggunaan dan akses Anda atas Platform (didefinisikan di bawah) dan penggunaan Layanan
-          (didefinisikan di bawah). <span class="font-bold text-gray-700">Dengan mengakses Platform dan/atau menggunakan Layanan, Anda setuju untuk tunduk dan terikat pada Ketentuan Penggunaan ini</span>. Jika Anda tidak menyetujui
-          Ketentuan Penggunaan ini, maka Anda jangan/berhenti mengakses dan/atau menggunakan Platform atau Layanan ini. Apabila Anda menggunakan engagement tools yang disediakan oleh Roadwave pada Platform, maka Syarat dan Ketentuan
-          Platform Engagement Tools akan berlaku.
+          (didefinisikan di bawah). <span class="font-bold text-gray-700 dark:text-gray-200">Dengan mengakses Platform dan/atau menggunakan Layanan, Anda setuju untuk tunduk dan terikat pada Ketentuan Penggunaan ini</span>. Jika Anda tidak
+          menyetujui Ketentuan Penggunaan ini, maka Anda jangan/berhenti mengakses dan/atau menggunakan Platform atau Layanan ini. Apabila Anda menggunakan engagement tools yang disediakan oleh Roadwave pada Platform, maka Syarat dan
+          Ketentuan Platform Engagement Tools akan berlaku.
         </p>
         <p class="mb-3 text-gray-500 dark:text-gray-400 px-1 text-justify">
           Jika Anda mengakses, mengunggah, atau melihat (1) Konten Siaran Langsung (Livestream); (2) konten yang dihasilkan oleh Anda atau pengguna lainnya pada Platform atau setiap Penjual; dan (3) konten yang dihasilkan oleh pihak ketiga
@@ -352,7 +355,7 @@
         <p class="mb-3 text-gray-500 dark:text-gray-400 px-1 text-justify">(ii) biaya yang terkait dengan penggunaan suatu Layanan atau pembelian Produk; dan</p>
         <p class="mb-3 text-gray-500 dark:text-gray-400 px-1 text-justify">(iii) penerimaan dan kepatuhan Anda sesuai dengan Ketentuan Penggunaan ini.</p>
         <p class="mb-3 text-gray-500 dark:text-gray-400 px-1 text-justify">Jika Anda tidak memiliki izin dari orang tua atau wali Anda, Anda harus berhenti menggunakan atau mengakses Platform dan berhenti menggunakan Layanan ini.</p>
-        <ol class="space-y-5 text-gray-700 list-decimal list-inside dark:text-gray-800 text-xl font-semibold mb-2">
+        <ol class="space-y-5 text-gray-700 list-decimal list-inside dark:text-gray-200 text-xl font-semibold mb-2">
           <li class="">
             Definisi & Interpretasi
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
@@ -514,7 +517,9 @@
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">(a) akses terhadap Platform dan/atau penggunaan Layanan oleh Anda; atau</p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">(b) unggahan, pengumuman/pengungkapan, pemberian informasi, data atau komunikasi, yang sah yang diterbitkan oleh Anda.</p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              Username, Password serta identifikasi wajah atau sidik jari Anda merupakan informasi rahasia yang tidak dapat dibagikan dengan pihak manapun. Kami akan selalu berpegangan dan menganggap bahwa penggunaan atas nama Username,Password dan/atau Login Biometrik Anda dilakukan oleh Anda sendiri dan berhak menyimpulkan bahwa pengunaan/kegiatan tersebut dilakukan atau dikirimkan oleh Anda. Anda selanjutnya setuju dan mengakui bahwa Anda terikat dan bertanggung jawab atas setiap akibat yang timbul terkait penggunaan Layanan dan/atau akses ke Platform dengan menggunakan Username dan Password Anda (termasuk melalui suatu identifikasi wajah atau sidik jari).
+              Username, Password serta identifikasi wajah atau sidik jari Anda merupakan informasi rahasia yang tidak dapat dibagikan dengan pihak manapun. Kami akan selalu berpegangan dan menganggap bahwa penggunaan atas nama
+              Username,Password dan/atau Login Biometrik Anda dilakukan oleh Anda sendiri dan berhak menyimpulkan bahwa pengunaan/kegiatan tersebut dilakukan atau dikirimkan oleh Anda. Anda selanjutnya setuju dan mengakui bahwa Anda terikat
+              dan bertanggung jawab atas setiap akibat yang timbul terkait penggunaan Layanan dan/atau akses ke Platform dengan menggunakan Username dan Password Anda (termasuk melalui suatu identifikasi wajah atau sidik jari).
             </p>
           </li>
           <li>
@@ -579,9 +584,9 @@
             Hyperlink, peringatan dan iklan/advertising
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
               7.1. Hyperlink: Untuk kemudahan Anda, kami dapat mencantumkan hyperlink ke situs-situs lain atau konten di Internet yang dimiliki atau dioperasikan oleh pihak ketiga. Situs yang terhubung atau konten tidak di bawah kendali
-              kami dan kami tidak bertanggung jawab atas kesalahan, kelalaian, penundaan, pencemaran nama baik, fitnah, kebohongan, kecabulan, pornografi, tidak senonoh, ketidaktepatan atau materi yang lain yang terkandung dalam isi, atau konsekuensi
-              mengakses, setiap situs web terkait. Setiap hyperlink ke situs-situs lain atau konten bukanlah merupakan bentuk dukungan atau verifikasi situs atau konten tersebut dan Anda setuju bahwa akses Anda ke atau penggunaan situs yang terhubung atau
-              konten sepenuhnya menjadi resiko Anda sendiri.
+              kami dan kami tidak bertanggung jawab atas kesalahan, kelalaian, penundaan, pencemaran nama baik, fitnah, kebohongan, kecabulan, pornografi, tidak senonoh, ketidaktepatan atau materi yang lain yang terkandung dalam isi, atau
+              konsekuensi mengakses, setiap situs web terkait. Setiap hyperlink ke situs-situs lain atau konten bukanlah merupakan bentuk dukungan atau verifikasi situs atau konten tersebut dan Anda setuju bahwa akses Anda ke atau
+              penggunaan situs yang terhubung atau konten sepenuhnya menjadi resiko Anda sendiri.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
               7.2. Iklan: Kami dapat melampirkan banners, java applet dan / atau bahan lain untuk Platform untuk tujuan advertising atau iklan produk dan/atau layanan kami atau iklan/advertisingproduk/layanan Vendor Pihak Ketiga kami. Untuk
@@ -618,77 +623,90 @@
               melanggar atau bertindak tidak sesuai dengan syarat atau ketentuan yang berlaku di sini, atau jika dalam pendapat kami atau pendapat otoritas regulasi, layanan tersebut yang berkaitan dengan Platform tidak untuk dapat
               diberikan/dilaksanakan.
             </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">9.2. Pengakhiran oleh Anda:</p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              9.2. Pengakhiran oleh Anda:  
+              Anda dapat mengakhiri Ketentuan Penggunaan ini dengan memberikan pemberitahuan secara tertulis dalam waktu 7 (tujuh) hari kerja kepada kami.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              Anda dapat mengakhiri Ketentuan Penggunaan ini dengan memberikan pemberitahuan secara tertulis dalam waktu 7 (tujuh) hari kerja kepada kami. 
-            </p>
-            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              9.3. Untuk tujuan pengakhiran ini, Anda dan Roadwave sepakat untuk mengesampingkan ketentuan yang diatur dalam Pasal 1266 KUH Perdata Indonesia sehingga pengakhiran akan dilakukan tanpa memerlukan persetujuan atau keputusan pengadilan atau lembaga lain dalam wilayah Republik Indonesia. 
+              9.3. Untuk tujuan pengakhiran ini, Anda dan Roadwave sepakat untuk mengesampingkan ketentuan yang diatur dalam Pasal 1266 KUH Perdata Indonesia sehingga pengakhiran akan dilakukan tanpa memerlukan persetujuan atau keputusan
+              pengadilan atau lembaga lain dalam wilayah Republik Indonesia.
             </p>
           </li>
           <li>
-            Pemberitahuan 
+            Pemberitahuan
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">10.1 Semua pemberitahuan atau komunikasi lainnya yang diberikan kepada Anda:</p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              10.1 Semua pemberitahuan atau komunikasi lainnya yang diberikan kepada Anda: 
+              a. Dikomunikasikan melalui Platform, media cetak atau elektronik lainnya yang kami kirimkan dalam suatu tanggal publikasi atau siaran yang telah kami pilih; atau
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              a. Dikomunikasikan melalui Platform, media cetak atau elektronik lainnya yang kami kirimkan dalam suatu tanggal publikasi atau siaran yang telah kami pilih; atau 
+              b. Dikirim melalui pos atau disampaikan pada alamat terakhir Anda, dan akan dianggap telah diterima oleh Anda pada hari pengiriman tersebut atau pada hari diterimanya.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              b. Dikirim melalui pos atau disampaikan pada alamat terakhir Anda, dan akan dianggap telah diterima oleh Anda pada hari pengiriman tersebut atau pada hari diterimanya. 
+              10.2 Pemberitahuan dari Anda: Anda hanya dapat memberikan pemberitahuan kepada kami secara tertulis dikirim ke alamat atau alamat e-mail kami ditunjuk, dan kami akan dianggap telah menerima pemberitahuan tersebut hanya pada
+              saat tanggal penerimaan. Kami berusaha untuk menanggapi secara cepat setiap pemberitahuan dari Anda, namun kami tidak dapat menjamin bahwa kami akan selalu merespon dengan kecepatan yang konsisten setiap saat.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              10.2 Pemberitahuan dari Anda: Anda hanya dapat memberikan pemberitahuan kepada kami secara tertulis dikirim ke alamat atau alamat e-mail kami ditunjuk, dan kami akan dianggap telah menerima pemberitahuan tersebut hanya pada saat tanggal penerimaan. Kami berusaha untuk menanggapi secara cepat setiap pemberitahuan dari Anda, namun kami tidak dapat menjamin bahwa kami akan selalu merespon dengan kecepatan yang konsisten setiap saat. 
-            </p>
-            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              10.3 Media lain: Kendati diatur dalam Pasal 10.1 dan 10.2 di atas, kami mungkin sewaktu-waktu dapat memilih media atau cara yang lain dalam memberikan pemberitahuan (termasuk namun tidak terbatas pada e-mail atau bentuk lain dari komunikasi elektronik) dan waktu atau saat dianggap telah diterimanya pemberitahuan tersebut. 
+              10.3 Media lain: Kendati diatur dalam Pasal 10.1 dan 10.2 di atas, kami mungkin sewaktu-waktu dapat memilih media atau cara yang lain dalam memberikan pemberitahuan (termasuk namun tidak terbatas pada e-mail atau bentuk lain
+              dari komunikasi elektronik) dan waktu atau saat dianggap telah diterimanya pemberitahuan tersebut.
             </p>
           </li>
           <li>
             Umum
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.1 Kecuali ditentukan lain berdasarkan Ketentuan Penggunaan ini, pasal-pasal dalam Ketentuan Penggunaan ini dan hak dan ganti rugi kami berdasarkan Ketentuan Penggunaan ini, adalah kumulatif dan tanpa prasangka serta hak atau ganti rugi kami mungkin kami miliki berdasarkan hukum atau keadilan, dan tidak ada ketentuan yang akan menghalangi atau mencegah hak kami dan upaya hukum atau ganti rugi kami berdasarkan hukum yang berlaku. 
+              11.1 Kecuali ditentukan lain berdasarkan Ketentuan Penggunaan ini, pasal-pasal dalam Ketentuan Penggunaan ini dan hak dan ganti rugi kami berdasarkan Ketentuan Penggunaan ini, adalah kumulatif dan tanpa prasangka serta hak
+              atau ganti rugi kami mungkin kami miliki berdasarkan hukum atau keadilan, dan tidak ada ketentuan yang akan menghalangi atau mencegah hak kami dan upaya hukum atau ganti rugi kami berdasarkan hukum yang berlaku.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.2 Kegagalan kami untuk menegakkan Ketentuan Penggunaan tidak dapat diartikan sebagai pengesampingan dari ketentuan - ketentuan ini, dan kegagalan tersebut tidak akan mempengaruhi hak kami selanjutnya untuk menegakkan Ketentuan Penggunaan ini. Kami akan tetap berhak menggunakan hak dan ganti rugi/upaya hukum kami dalam setiap kondisi lain di mana Anda melanggar Ketentuan Penggunaan ini. 
+              11.2 Kegagalan kami untuk menegakkan Ketentuan Penggunaan tidak dapat diartikan sebagai pengesampingan dari ketentuan - ketentuan ini, dan kegagalan tersebut tidak akan mempengaruhi hak kami selanjutnya untuk menegakkan
+              Ketentuan Penggunaan ini. Kami akan tetap berhak menggunakan hak dan ganti rugi/upaya hukum kami dalam setiap kondisi lain di mana Anda melanggar Ketentuan Penggunaan ini.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.3 Keterpisahan: Jika suatu saat ada ketentuan pada Ketentuan Penggunaan ini yang menjadi ilegal, tidak sah atau tidak dapat diterapkan dalam hal apapun, maka legalitas, validitas dan keberlakuan dari ketentuan lainnya dalam Ketentuan Penggunaan ini tidak akan terpengaruh atau berkurang karenanya, dan akan terus berlaku. 
+              11.3 Keterpisahan: Jika suatu saat ada ketentuan pada Ketentuan Penggunaan ini yang menjadi ilegal, tidak sah atau tidak dapat diterapkan dalam hal apapun, maka legalitas, validitas dan keberlakuan dari ketentuan lainnya dalam
+              Ketentuan Penggunaan ini tidak akan terpengaruh atau berkurang karenanya, dan akan terus berlaku.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.4 Hak Pihak Ketiga: Seseorang atau pihak yang bukan merupakan pihak yang tunduk pada Ketentuan Penggunaan ini, tidak berhak berdasarkan hukum apapun dan yurisdiksi manapun untuk menjalankan ketentuan dari Ketentuan Penggunaan ini. Untuk menghindari keraguan, tidak ada dalam Pasal ini yang akan mempengaruhi hak-hak dari setiap pengalihan yang diizinkan atas Ketentuan Penggunaan ini. 
+              11.4 Hak Pihak Ketiga: Seseorang atau pihak yang bukan merupakan pihak yang tunduk pada Ketentuan Penggunaan ini, tidak berhak berdasarkan hukum apapun dan yurisdiksi manapun untuk menjalankan ketentuan dari Ketentuan
+              Penggunaan ini. Untuk menghindari keraguan, tidak ada dalam Pasal ini yang akan mempengaruhi hak-hak dari setiap pengalihan yang diizinkan atas Ketentuan Penggunaan ini.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.5 Hukum yang Berlaku: Penggunaan Platform dan/atau Layanan dan Ketentuan Penggunaan ini akan diatur oleh dan ditafsirkan sesuai dengan hukum Republik Indonesia. 
+              11.5 Hukum yang Berlaku: Penggunaan Platform dan/atau Layanan dan Ketentuan Penggunaan ini akan diatur oleh dan ditafsirkan sesuai dengan hukum Republik Indonesia.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.6 Injunctive relief: Kami dapat mencari atau mendapatkan perintah penghentian dengan segera apabila berdasarkan itikad baik kami menentukan bahwa suatu pelanggaran atau tidak dipatuhinya Ketentuan Penggunaan ini adalah sedemikian rupa sehingga perintah penahanan sementara atau perintah lainnya adalah satu-satunya ganti rugi atau pemulihan yang sesuai atau memadai. 
+              11.6 Injunctive relief: Kami dapat mencari atau mendapatkan perintah penghentian dengan segera apabila berdasarkan itikad baik kami menentukan bahwa suatu pelanggaran atau tidak dipatuhinya Ketentuan Penggunaan ini adalah
+              sedemikian rupa sehingga perintah penahanan sementara atau perintah lainnya adalah satu-satunya ganti rugi atau pemulihan yang sesuai atau memadai.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.7 Perubahan: Roadwave dapat merubah setiap, sebagian atau seluruh ketentuan sebagaimana terdapat dalam Ketentuan Penggunaan ini dengan cara menyampaikan pemberitahuan melalui Platform atau dengan metode lain sebagaimana ditentukan oleh Roadwave (yang mungkin termasuk pemberitahuan melalui e-mail), yang mana perubahan tersebut akan berlaku pada tanggal yang kami tentukan melalui cara di atas. Jika Anda menggunakan Platform atau Layanan setelah tanggal tersebut, Anda dianggap telah menerima perubahan tersebut. Jika Anda tidak mau menerima perubahan tersebut, Anda harus berhenti mengakses atau menggunakan Platform dan Layanan dan mengakhiri Ketentuan Penggunaan ini. Hak kami untuk merubah Ketentuan Penggunaan ini sebagaimana disebut di atas dapat dilaksanakan tanpa persetujuan dari setiap orang atau badan yang bukan merupakan suatu pihak berdasarkan Ketentuan Penggunaan ini. 
+              11.7 Perubahan: Roadwave dapat merubah setiap, sebagian atau seluruh ketentuan sebagaimana terdapat dalam Ketentuan Penggunaan ini dengan cara menyampaikan pemberitahuan melalui Platform atau dengan metode lain sebagaimana
+              ditentukan oleh Roadwave (yang mungkin termasuk pemberitahuan melalui e-mail), yang mana perubahan tersebut akan berlaku pada tanggal yang kami tentukan melalui cara di atas. Jika Anda menggunakan Platform atau Layanan setelah
+              tanggal tersebut, Anda dianggap telah menerima perubahan tersebut. Jika Anda tidak mau menerima perubahan tersebut, Anda harus berhenti mengakses atau menggunakan Platform dan Layanan dan mengakhiri Ketentuan Penggunaan ini.
+              Hak kami untuk merubah Ketentuan Penggunaan ini sebagaimana disebut di atas dapat dilaksanakan tanpa persetujuan dari setiap orang atau badan yang bukan merupakan suatu pihak berdasarkan Ketentuan Penggunaan ini.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.8 Koreksi kesalahan: Setiap kesalahan ketik, administrasi atau kesalahan lainnya atau kelalaian dalam penerimaan, faktur atau dokumen lainnya yang terjadi pada sisi kami akan menjadi bahan perbaikan kami yang dilakukan oleh kami. 
+              11.8 Koreksi kesalahan: Setiap kesalahan ketik, administrasi atau kesalahan lainnya atau kelalaian dalam penerimaan, faktur atau dokumen lainnya yang terjadi pada sisi kami akan menjadi bahan perbaikan kami yang dilakukan oleh
+              kami.
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">11.9 Mata uang: Uang yang berkaitan dengan Ketentuan Penggunaan ini adalah dalam mata uang Rupiah Indonesia.</p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              11.10 Seluruh kesepakatan: Ketentuan Penggunaan ini merupakan keseluruhan kesepakatan antara Anda dan kami berkaitan dengan materi pokok dalam perjanjian dan menggantikan semua pemahaman, komunikasi dan kesepakatan sebelumnya
+              sehubungan dengan materi pokok dalam perjanjian.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.9 Mata uang: Uang yang berkaitan dengan Ketentuan Penggunaan ini adalah dalam mata uang Rupiah Indonesia. 
+              11.11 Mengikat dan konklusif: Anda mengakui dan menyetujui bahwa setiap catatan (termasuk catatan dari setiap percakapan telepon terkait dengan Layanan, jika ada) dikelola oleh kami atau penyedia layanan kami yang berhubungan
+              dengan Platform dan Layanan bersifat mengikat dan konklusif pada Anda untuk semua tujuan apapun dan menjadi bukti dari setiap informasi dan / atau data yang dikirimkan antara kami dan Anda. Anda setuju bahwa semua catatan
+              tersebut diterima sebagai bukti dan bahwa Anda tidak akan menantang atau membantah diterimanya, kehandalan, akurasi atau keaslian catatan tersebut dengan alasan karena catatan tersebut dalam bentuk elektronik atau output dari
+              sistem computer.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.10 Seluruh kesepakatan: Ketentuan Penggunaan ini merupakan keseluruhan kesepakatan antara Anda dan kami berkaitan dengan materi pokok dalam perjanjian dan menggantikan semua pemahaman, komunikasi dan kesepakatan sebelumnya sehubungan dengan materi pokok dalam perjanjian. 
+              11.12 Sub-kontraktor dan delegasi: Kami berhak untuk mendelegasikan atau mensub-kontrak kinerja dari setiap fungsi kami sehubungan dengan Platform dan/atau Layanan dan berhak untuk menggunakan penyedia layanan, subkontraktor
+              dan / atau agen pada seperti hal sebagaimana kami anggap pantas.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.11 Mengikat dan konklusif: Anda mengakui dan menyetujui bahwa setiap catatan (termasuk catatan dari setiap percakapan telepon terkait dengan Layanan, jika ada) dikelola oleh kami atau penyedia layanan kami yang berhubungan dengan Platform dan Layanan bersifat mengikat dan konklusif pada Anda untuk semua tujuan apapun dan menjadi bukti dari setiap informasi dan / atau data yang dikirimkan antara kami dan Anda. Anda setuju bahwa semua catatan tersebut diterima sebagai bukti dan bahwa Anda tidak akan menantang atau membantah diterimanya, kehandalan, akurasi atau keaslian catatan tersebut dengan alasan karena catatan tersebut dalam bentuk elektronik atau output dari sistem computer. 
+              11.13 Pengalihan: Anda tidak dapat mengalihkan hak dan kewajiban Anda atas Ketentuan Penggunaan tanpa izin tertulis sebelumnya dari kami.
             </p>
             <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.12 Sub-kontraktor dan delegasi: Kami berhak untuk mendelegasikan atau mensub-kontrak kinerja dari setiap fungsi kami sehubungan dengan Platform dan/atau Layanan dan berhak untuk menggunakan penyedia layanan, subkontraktor dan / atau agen pada seperti hal sebagaimana kami anggap pantas. 
-            </p>
-            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.13 Pengalihan: Anda tidak dapat mengalihkan hak dan kewajiban Anda atas Ketentuan Penggunaan tanpa izin tertulis sebelumnya dari kami. 
-            </p>
-            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
-              11.14 Force Majeure: Setiap wanprestasi, kesalahan, gangguan atau keterlambatan dalam pelaksanaan kewajiban atau setiap ketidakakuratan, atau ketidaksesuaian di Platform dan/atau Layanan yang disebabkan, secara keseluruhan atau sebagian, langsung atau tidak langsung, oleh suatu peristiwa atau kegagalan yang disebabkan oleh Force Majeure atau Keadaan Memaksa tidak akan dianggap sebagai kegagalan 3second dalam memenuhi kewajibannya berdasarkan Ketentuan Penggunaan ini. 
+              11.14 Force Majeure: Setiap wanprestasi, kesalahan, gangguan atau keterlambatan dalam pelaksanaan kewajiban atau setiap ketidakakuratan, atau ketidaksesuaian di Platform dan/atau Layanan yang disebabkan, secara keseluruhan
+              atau sebagian, langsung atau tidak langsung, oleh suatu peristiwa atau kegagalan yang disebabkan oleh Force Majeure atau Keadaan Memaksa tidak akan dianggap sebagai kegagalan 3second dalam memenuhi kewajibannya berdasarkan
+              Ketentuan Penggunaan ini.
             </p>
           </li>
         </ol>
@@ -697,7 +715,7 @@
 
     <!-- Footer  -->
 
-    <footer class="bg-white dark:bg-gray-900 mb-16 sm:mb-0 px-5">
+    <footer class="bg-white dark:bg-darkmodeOther mb-16 sm:mb-0 px-5">
       <div class="mx-auto w-full max-w-screen-xl md:pb-14 lg:pb-0">
         <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div>
@@ -768,7 +786,7 @@
             </ul>
           </div>
         </div>
-        <div class="hidden px-4 py-6 bg-[#343A40] dark:bg-gray-700 lg:flex lg:items-center lg:justify-between">
+        <div class="hidden px-4 py-6 bg-[#343A40] dark:bg-darkmodeOther lg:flex lg:items-center lg:justify-between">
           <span class="text-sm text-white dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">Roadwave™</a>. All Rights Reserved. </span>
           <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
