@@ -61,16 +61,16 @@
             </a>
             <ul class="hidden sm:flex flex-row font-bold rounded-lg rtl:space-x-reverse dark:bg-gray-800 text-sm md:basis-1/3">
               <li>
-                <a href="#" class="text-base block py-2 px-3 text-slate-600 rounded hover:text-mainColor dark:text-gray-400">PRODUCT</a>
+                <a href="#" class="text-base block py-2 px-3 text-slate-600 rounded hover:text-mainColor dark:text-gray-400" aria-current="page">PRODUCT</a>
               </li>
               <li>
-                <a href="information.html" class="text-base block py-2 px-3 text-slate-600 rounded hover:text-mainColor dark:text-gray-400" >INFORMATION</a>
+                <a href="#" class="text-base block py-2 px-3 text-slate-700 rounded hover:text-mainColor dark:text-gray-400">INFORMATION</a>
               </li>
               <li>
                 <a href="#" class="text-base block py-2 px-3 text-slate-700 rounded hover:text-mainColor dark:text-gray-400">HELP</a>
               </li>
               <li>
-                <a href="#" class="text-base block py-2 px-3 text-slate-700 rounded hover:text-mainColor dark:text-gray-400" aria-current="page">SALE</a>
+                <a href="#" class="text-base block py-2 px-3 text-slate-700 rounded hover:text-mainColor dark:text-gray-400">SALE</a>
               </li>
             </ul>
             <div class="flex justify-end items-center flex-1 sm:flex-none">
@@ -271,383 +271,231 @@
       </div>
     </div>
 
-    <!-- Carosel -->
-
-    <div id="default-carousel" class="relative w-full" data-carousel="slide">
-      <!-- Carousel wrapper -->
-      <div class="relative h-80 overflow-hidden md:h-[500px] bg-slate-500">
-        <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/resource/image1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." width="100%" />
-        </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/resource/image2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." width="100%" />
-        </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/resource/image3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." width="1000px" />
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/resource/image4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." width="100%" />
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/resource/image5.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." width="100%" />
-        </div>
-      </div>
-      <!-- Slider indicators -->
-      <div class="absolute z-20 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-      </div>
-      <!-- Slider controls -->
-      <button type="button" class="absolute top-0 start-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span
-          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-        >
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-          </svg>
-          <span class="sr-only">Previous</span>
-        </span>
-      </button>
-      <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span
-          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-        >
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-          </svg>
-          <span class="sr-only">Next</span>
-        </span>
-      </button>
-    </div>
-
-    <!-- Best Seller Product -->
-    <div id="animation-carousel" class="relative w-full md:mb-[120px] mb-[80px] mt-5" data-carousel="static">
-      <!-- Carousel wrapper -->
-      <div class="relative h-[400px] overflow-hidden rounded-lg md:h-[550px] lg:h-[850px]">
-        <div class="w-full text-center">
-          <h2>Best Seller Product</h2>
-        </div>
-        <!-- Item 1 -->
-        <div class="hidden duration-200 ease-linear" data-carousel-item>
-          <div class="absolute w-full block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-            <div class="flex items-center py-5 px-3">
-              <!-- Items 1 -->
-              <div class="w-1/2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mr-1">
-                <a href="#">
-                  <img class="p-2 rounded-t-lg" src="/image/IMG_8815.JPG" alt="product image" />
-                </a>
-                <div class="px-2 pb-2">
-                  <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-                  <a href="#">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Nissan GTR</h5>
-                  </a>
-                  <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-                    <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-                      <p class="text-[11px] text-red-600">Rp</p>
-                      <p class="text-[11px] text-red-600">90.000</p>
-                      <p class="text-[11px]"><s>Rp</s></p>
-                      <p class="text-[11px]"><s>90.000</s></p>
-                    </div>
-                    <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border">20%</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Items 2 -->
-              <div class="w-1/2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border ml-1">
-                <a href="#">
-                  <img class="p-2 rounded-t-lg" src="/image/IMG_8816.JPG" alt="product image" />
-                </a>
-                <div class="px-2 pb-2">
-                  <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-                  <a href="#">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Nissan GTR</h5>
-                  </a>
-                  <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-                    <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-                      <p class="text-[11px] text-red-600">Rp</p>
-                      <p class="text-[11px] text-red-600">90.000</p>
-                      <p class="text-[11px]"><s>Rp</s></p>
-                      <p class="text-[11px]"><s>90.000</s></p>
-                    </div>
-                    <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border">20%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="hidden duration-200 ease-linear" data-carousel-item>
-          <div class="absolute w-full block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-            <div class="flex items-center py-3 px-3 flex-wrap justify-center lg:px-20">
-              <!-- Items 1 -->
-              <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-                <a href="#">
-                  <img class="p-2 rounded-t-lg" src="/image/IMG_8815.JPG" width="100%" alt="product image" />
-                </a>
-                <div class="px-2 pb-2">
-                  <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-                  <a href="#">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Nissan GTR</h5>
-                  </a>
-                  <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-                    <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-                      <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-                      <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-                      <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-                      <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-                    </div>
-                    <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Items 2 -->
-              <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-                <a href="#">
-                  <img class="p-2 rounded-t-lg" src="/image/IMG_8815.JPG" width="100%" alt="product image" />
-                </a>
-                <div class="px-2 pb-2">
-                  <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-                  <a href="#">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Nissan GTR</h5>
-                  </a>
-                  <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-                    <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-                      <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-                      <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-                      <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-                      <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-                    </div>
-                    <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Slider controls -->
-      <div class="buttonControl flex justify-center">
-        <button type="button" class="top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-500/30 dark:bg-gray-800/30 group-hover:bg-slate-600/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+    <!-- BreadCrumb -->
+    <nav class="flex mt-24 px-10 md:px-14 mb-7" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+        <li class="inline-flex items-center">
+          <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-mainColor dark:text-gray-400 dark:hover:text-white">
+            <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
+              />
             </svg>
-            <span class="sr-only">Previous</span>
-          </span>
-        </button>
-        <button type="button" class="top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-500/30 dark:bg-gray-800/30 group-hover:bg-slate-600/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            Home
+          </a>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
             </svg>
-            <span class="sr-only">Next</span>
-          </span>
-        </button>
-      </div>
-    </div>
+            <a href="#" class="ms-1 text-sm font-medium text-gray-700 hover:text-mainColor md:ms-2 dark:text-gray-400 dark:hover:text-white">Information</a>
+          </div>
+        </li>
+        <li aria-current="page">
+          <div class="flex items-center">
+            <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+            </svg>
+            <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Kebijakan Privasi</span>
+          </div>
+        </li>
+      </ol>
+    </nav>
 
-    <!-- Card -->
+    <div class="mt-10 mb-10">
+      <!-- Tabs -->
+      <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 mt-5 px-7 md:px-10">
+        <li class="me-2">
+          <a href="information.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Tentang Kami</a>
+        </li>
+        <li class="me-2">
+          <a href="informationAP.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Aturan Pengguna</a>
+        </li>
+        <li class="me-2">
+          <a href="#" aria-current="page" class="inline-block p-4 text-white bg-mainColor rounded-t-lg active dark:bg-gray-800 dark:text-white">Kebijakan Privasi</a>
+        </li>
+        <li class="me-2">
+          <a href="informationKHC.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Kebijakan Hak Cipta</a>
+        </li>
+        <li class="me-2">
+          <a href="informationSKB.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Syarat & Ketentuan Berlaku</a>
+        </li>
+        <li class="me-2">
+          <a href="informationA.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Aturan</a>
+        </li>
+      </ul>
 
-    <div class="flex items-center py-3 px-3 flex-wrap justify-center lg:px-20">
-      <!-- Items 1 -->
-      <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-        <a href="#">
-          <img class="p-2 rounded-t-lg" src="/image/IMG_8815.JPG" width="100%" alt="product image" />
-        </a>
-        <div class="px-2 pb-2">
-          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-          <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Nissan GTR</h5>
-          </a>
-          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-              <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-              <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-              <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-              <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-            </div>
-            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-          </div>
-        </div>
+      <!-- Content -->
+      <div class="px-10 md:px-14 py-5 mb-5">
+        <h3 class="text-3xl font-semibold text-slate-700 mb-10 dark:text-gray-800 mt-5">Kebijakan Privasi</h3>
+        <ol class="space-y-10 text-gray-700 list-decimal list-inside dark:text-gray-800 text-xl font-semibold mb-2">
+          <li>
+            Pendahuluan
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Selamat datang di roadwaveapparel.com yang dioperasikan oleh Roadwave Apparel. Roadwave Apparel bertanggung jawab dalam menjaga privasi data pribadi Anda dan patuh pada hukum yang berlaku. Kami berkomitmen untuk mengelola,
+              melindungi, dan memproses Data Pribadi Anda sesuai dengan Kebijakan ini yang akan berlaku untuk seluruh data pribadi yang kami peroleh dari Anda melalui platform kami.
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Silakan tinjau kembali dokumen ini karena dokumen ini mengatur penggunaan situs ini. Penggunaan situs kami merupakan persetujuan Anda untuk mengikuti persyaratan penggunaan. Kami juga dapat mengumpulkan dan memproses data
+              pribadi Anda sebagaimana dikecualikan dalam Hukum yang Berlaku yang tidak dijabarkan dalam Kebijakan ini
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">Untuk tujuan pemahaman Kebijakan Perlindungan Data Pribadi roadwaveapparel.com, kebijakan ini memiliki arti sebagai berikut :</p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              <span class="font-bold text-gray-700">“Hukum yang Berlaku”</span> berarti seluruh peraturan dan perundang-undangan yang terkait dengan perlindungan dan/atau pengelolaan data pribadi yang berlaku di Indonesia, termasuk namun
+              tidak terbatas pada Undang-Undang No. 11 Tahun 2018 Tentang Informasi dan Transaksi Elektronik (beserta perubahannya), Peraturan Pemerintah No. 82 Tahun 2012 Tentang Penyelenggaraan Sistem dan Transaksi Elektronik dan
+              Peraturan Menteri Komunikasi Dan Informatika Nomor 20 Tahun 2016 Tentang Perlindungan Data Pribadi dalam Sistem Elektronik;
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              <span class="font-bold text-gray-700">“Data Pribadi”</span> berarti data apapun mengenai (a) seorang individu yang dapat diidentifikasi (i) dari data tersebut; atau (ii) dari data dan informasi lain yang kami miliki atau yang
+              dapat kami akses dan termasuk data dalam database kami yang dapat diperbaharui dari waktu ke waktu, atau (b) didefinisikan sebagai “data pribadi” atau “informasi pribadi” dalam Hukum yang Berlaku;
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              <span class="font-bold text-gray-700">“Media Sosial”</span> berarti halaman dan akun Roadwave Apparel dalam platform media sosial milik pihak ketiga seperti Instagram, Shopee, dan Tiktok.
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              <span class="font-bold text-gray-700">“Website”</span> berarti website 3Second yang dapat diakses melalui alamat www.roadwaveapparel.com;
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Kami dapat memperbaharui Kebijakan ini untuk memastikan bahwa Kebijakan senantiasa konsisten dengan trend industri dan/atau segala perubahan dalam persyaratan hukum dan peraturan. Anda setuju untuk mengikatkan diri dalam
+              persyaratan dan ketentuan yang berlaku dalam Kebijakan ini yang mana dapat diperbaharui dari waktu ke waktu. Kami akan berusaha untuk menginformasikan kepada Anda baik melalui email atau melalui pemberitahuan dalam Website
+              apabila ada perubahan material pada Kebijakan.
+            </p>
+          </li>
+          <li>
+            Bagaimana Kami Mengumpulkan Data Pribadi Anda
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">Kami akan/mungkin mengumpulkan data pribadi Anda saat :</p>
+            <ul class="ps-10 space-y-1 list-disc list-outside text-base text-gray-500 font-normal dark:text-gray-400">
+              <li>Anda membuat akun pada Website;</li>
+              <li>Anda memilah atau melakukan browsingatas produk-produk dan jasa kami atau melakukan aktivitas dalam Website kami;</li>
+              <li>Anda menerima cookies dalam perangkat Anda;</li>
+              <li>Anda berinteraksi dengan tim customer service atau perwakilan kami lainnya, misalnya, melalui webform, email, telpon, surat atau dalam pertemuan tatap muka;</li>
+              <li>Anda berinteraksi dengan kami melalui Media Sosial, misalnya dengan memberi tanda likeatau mengomentari isi posting kami, atau dengan menyampaikan pesan pribadi kepada kami melalui Media Sosial kami;</li>
+              <li>Anda berpartisipasi dalam promosi, undian, inisiatif atau permintaan Data Pribadi tambahan melalui survey konsumen;</li>
+              <li>
+                Perwakilan yang berwenang untuk mewakili Anda memberikan Data Pribadi milik Anda kepada kami sesuai dengan kewenangan yang sewajarnya Anda berikan, misalnya apabila perwakilan Anda tersebut membeli produk atau jasa kami
+                untuk dikirimkan kepada Anda atau sebagai hadiah;
+              </li>
+              <li>Apabila Anda dengan suka rela menyerahkan Data Pribadi Anda kepada kami untuk alasan apapun.</li>
+            </ul>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Kami tidak menyimpan detail kartu kredit Anda baik yang digunakan untuk memproses pembayaran Anda atau untuk tujuan layanan pelanggan. Detail kartu kredit Anda dikumpulkan, diproses dan disimpan langsing oleh pihak ketiga yang
+              memproses pembayaran sesuai dengan persyaratan.
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Pastikan agar seluruh data pribadi yang Anda sampaikan kepada kami lengkap, akurat dan benar. Kesalahan pada data pribadi yang Anda sampaikan dapat mengakibatkan kami tidak dapat memberikan kepada Anda produk dan jasa yang
+              Anda inginkan.
+            </p>
+          </li>
+          <li>
+            Bagaimana Kami Menggunakan Informasi yang Anda Berikan Kepada Kami?
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Kami dapat menggunakan dan mengungkapkan data pribadi Anda untuk tujuan-tujuan yang diperlukan agar kami dapat menyampaikan produk kami kepada Anda, termasuk untuk:
+            </p>
+            <ul class="ps-10 space-y-1 list-disc list-outside text-base text-gray-500 font-normal dark:text-gray-400">
+              <li>Mendaftarkan dan mengelola akun pengguna Anda dan untuk memverifikasi identitas atau umur Anda;</li>
+              <li>Memproses pesanan produk Anda, memproses, atau menerima pembayaran atas pesanan Anda;</li>
+              <li>Mengirimkan atau menyediakan produk yang Anda beli, termasuk meminta kurir ekspedisi (pihak ketiga) untuk menelpon atau menghubungi Anda untuk memberikan informasi pengiriman produk yang Anda beli;</li>
+              <li>Memproses permintaan pengembalian barang atau pengembalian pembayaran Anda sesuai dengan Persyaratan dan Ketentuan kami;</li>
+              <li>Melakukan personalisasi dan meningkatkan customer experience Anda saat Anda mengunjungi Website kami, misalnya dengan memprioritaskan produk yang muncul dalam kolom pencarian Anda;</li>
+              <li>
+                Memenuhi ketentuan internal risk controls kami, akses kami terkait dengan proses pembayaran atau layanan bank seperti sengketa kartu kredit, penipuan, kesalahan dalam pembayaran; atau peraturan perundangan yang berlaku; dan
+              </li>
+              <li>
+                Memastikan Website kami berfungsi dengan baik dan untuk meningkatkan kinerja mereka dengan melakukan beberapa aktivitas tertentu yang diperlukan, seperti melakukan debugging dan analisa statistik untuk mengoptimalkan Website
+                kami.
+              </li>
+            </ul>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Kami juga dapat menggunakan data pribadi Anda untuk tujuan lain yang sewajarnya berhubungan dengan Tujuan dan yang persetujuannya telah kami peroleh dan urus sebagaimana diperlukan untuk Tujuan Tambahan atau dalam keadaan
+              dimana penggunaan termaksud tidak membutuhkan persetujuan berdasarkan Hukum yang Berlaku.
+            </p>
+          </li>
+          <li>
+            Kepada Siapa Data Pribadi Anda Akan Diungkapkan?
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">Terkait dengan penggunaan data pribadi, kami mungkin akan mengungkapkan data pribadi Anda kepada:</p>
+            <ul class="ps-10 space-y-1 list-disc list-outside text-base text-gray-500 font-normal dark:text-gray-400">
+              <li>Pegawai kami.</li>
+              <li>Pihak yang memproses pembayaran yang Anda lakukan melalui Website.</li>
+              <li>Penyedia logistik kami seperti jasa kurir yang mengantarkan pesanan kepada Anda.</li>
+              <li>Mitra bisnis kami yang secara terpisah memiliki akun anda untuk program voucher.</li>
+              <li>Mitra bisnis atau vendor kami yang memproses kegiatan promosi yang kami lakukan.</li>
+              <li>Penasihat dan konsultan kami.</li>
+              <li>Pihak lainnya yang Anda beri kewenangan untuk menerima pengungkapan Data Pribadi Anda dari kami.</li>
+            </ul>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Sebisa mungkin kami akan meminimalisir pengungkapan Data Pribadi Anda hanya untuk informasi yang diperlukan untuk pelaksanaan Tujuan atau untuk Tujuan Tambahan terkait.
+            </p>
+          </li>
+          <li>
+            Bagaimana Kami Melindungi dan Menarik Informasi Pelanggan?
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Kami menerapkan berbagai langkah pengamanan dan berusaha untuk memastikan keamanan data pribadi Anda di sistem kami. Data pribadi pengguna berada di belakang jaringan yang aman dan hanya dapat diakses oleh sejumlah kecil
+              karyawan yang memiliki hak akses khusus ke sistem tersebut. Namun demikian, tidak adanya jaminan atau keamanan absolut tidak dapat terhindarkan.
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Kami akan menyimpan data pribadi sesuai dengan Undang-Undang Privasi dan/atau hukum lain yang berlaku, yaitu, kami akan memusnahkan atau menganonimkan data pribadi Anda ketika kami secara wajar menganggap bahwa tujuan data
+              pribadi yang dikumpulkan itu tidak lagi difungsikan oleh penyimpanan data pribadi tersebut; penyimpanan tidak lagi diperlukan untuk tujuan hukum atau bisnis apa pun; dan tidak ada surat perintah yang melegitimasi untuk
+              melakukan penarikan data pribadi tersebut lebih jauh. Tunduk terhadap hukum yang berlaku, kami dapat secara aman membuang data pribadi Anda tanpa pemberitahuan sebelumnya kepada Anda.
+            </p>
+          </li>
+          <li>
+            Informasi yang Dikumpulkan Oleh Pihak Ketiga
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Website kami menggunakan Google Analytics, layanan analitik web yang disediakan oleh Google, Inc. ("Google"). Google Analytics menggunakan cookie, yang merupakan file teks yang ditempatkan pada perangkat Anda, untuk membantu
+              Website kami menganalisis, bagaimana pengguna menggunakan Website. Informasi yang dihasilkan oleh cookie mengenai penggunaan Platform (termasuk alamat IP Anda) akan ditransmisikan ke, dan disimpan oleh Google pada server.
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Google akan menggunakan informasi ini untuk tujuan mengevaluasi penggunaan Anda atas Platform kami, menyusun laporan mengenai aktivitas situs web bagi para operator situs web dan menyediakan layanan lain yang berkaitan dengan
+              aktivitas situs web serta penggunaan Internet. Google juga dapat mengalihkan informasi ini kepada pihak ketiga bilamana diwajibkan oleh hukum untuk melakukannya, atau bilamana pihak ketiga tersebut memproses informasi atas
+              nama Google. Google tidak akan mengaitkan alamat IP Anda dengan data lain apa pun yang dipegang oleh Google.
+            </p>
+          </li>
+          <li>
+            Hubungi Kami
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Apabila ada pertanyaan mengenai Data Pribadi Anda atau tentang Kebijakan ini, atau apabila Anda memiliki keluhan atas pengumpulan, penggunaan atau pengelolaan Data Pribadi Anda yang kami lakukan, atau apabila ada pertanyaan
+              mengenai ketundukan kami pada Hukum yang Berlaku, Anda dapat menghubungi Petugas Perlindungan Data kami melalui metode-metode berikut ini:
+            </p>
+            <ul class="ps-10 space-y-1 list-disc list-outside text-base text-gray-500 font-normal dark:text-gray-400">
+              <li>Nomor telpon: 0821-1774-8606</li>
+              <li>Alamat email: raodwave.apparel@gmail.com</li>
+            </ul>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Judul email dan surat harus dengan jelas berisi pertanyaan mengenai perlindungan data yang Anda tanyakan, minta atau keluhkan agar kami dapat tanggapi dengan baik. Kami akan berusaha untuk menanggapi setiap pertanyaan,
+              permintaan ataupun keluhan dengan tepat dan cepat.
+            </p>
+          </li>
+          <li>
+            Penyimpanan Informasi dan Penghapusan Data (Deletion of Data)
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              roadwaveapparel.com akan menyimpan informasi selama akun Pengguna tetap aktif dan dapat melakukan penghapusan data anda sesuai dengan ketentuan peraturan hukum yang berlaku. Jika anda ingin melakukan permintaan penghapusan
+              data anda maka anda dapat menghubungi kami melalui email dan nomor telephon yang tertera di point 7 pada halaman ini.
+            </p>
+          </li>
+          <li>
+            Hukum yang Berlaku
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">Kebijakan ini dan penggunaan Website diatur menurut hukum yang berlaku di Republik Indonesia.</p>
+          </li>
+          <li>
+            Perubahan Kebijakan Perlindungan Data
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Sebagai bagian dari upaya kami untuk dapat mengelola, melindungi dan memproses data pribadi Anda, kami akan mengkaji kebijakan, prosedur dan proses kami secara berkala. Kami dapat memperbarui Kebijakan ini untuk memastikan
+              bahwa Kebijakan senantiasa konsisten dengan trend industri dan/atau segala perubahan dalam persyaratan hukum dan peraturan. Kami memiliki hak untuk merubah isi dari Kebijakan ini berdasarkan pertimbangan kami semata.
+            </p>
+            <p class="text-base font-normal my-4 text-gray-500 dark:text-gray-400 px-1 text-justify">
+              Anda setuju untuk tunduk pada ketentuan dalam Kebijakan ini dan pembaharuannya dari waktu ke waktu. Kami menghimbau Anda untuk mengunjungi Website kami secara berkala untuk memastikan Anda mengetahui kebijakan kami yang
+              terbaru yang terkait dengan perlindungan Data Pribadi.
+            </p>
+          </li>
+        </ol>
       </div>
-      <!-- Items 2 -->
-      <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-        <a href="#">
-          <img class="p-2 rounded-t-lg" src="/image/IMG_8817.JPG" width="100%" alt="product image" />
-        </a>
-        <div class="px-2 pb-2">
-          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-          <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Speedway</h5>
-          </a>
-          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-              <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-              <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-              <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-              <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-            </div>
-            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-          </div>
-        </div>
-      </div>
-      <!-- Items 3 -->
-      <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-        <a href="#">
-          <img class="p-2 rounded-t-lg" src="/image/IMG_8818.JPG" width="100%" alt="product image" />
-        </a>
-        <div class="px-2 pb-2">
-          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-          <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Ice Cream</h5>
-          </a>
-          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-              <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-              <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-              <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-              <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-            </div>
-            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-          </div>
-        </div>
-      </div>
-      <!-- Items 4 -->
-      <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-        <a href="#">
-          <img class="p-2 rounded-t-lg" src="/image/IMG_8819.JPG" width="100%" alt="product image" />
-        </a>
-        <div class="px-2 pb-2">
-          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-          <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt GTR Machine-1</h5>
-          </a>
-          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-              <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-              <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-              <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-              <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-            </div>
-            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-          </div>
-        </div>
-      </div>
-      <!-- Items 5 -->
-      <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-        <a href="#">
-          <img class="p-2 rounded-t-lg" src="/image/IMG_8820.JPG" width="100%" alt="product image" />
-        </a>
-        <div class="px-2 pb-2">
-          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-          <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt GTR Machine-2</h5>
-          </a>
-          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-              <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-              <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-              <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-              <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-            </div>
-            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-          </div>
-        </div>
-      </div>
-      <!-- Items 6 -->
-      <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-        <a href="#">
-          <img class="p-2 rounded-t-lg" src="/image/IMG_8821.JPG" width="100%" alt="product image" />
-        </a>
-        <div class="px-2 pb-2">
-          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-          <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Kaliper Brembo</h5>
-          </a>
-          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-              <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-              <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-              <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-              <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-            </div>
-            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-          </div>
-        </div>
-      </div>
-      <!-- Items 7 -->
-      <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-        <a href="#">
-          <img class="p-2 rounded-t-lg" src="/image/IMG_8822.JPG" width="100%" alt="product image" />
-        </a>
-        <div class="px-2 pb-2">
-          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-          <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Ayla Series</h5>
-          </a>
-          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-              <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-              <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-              <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-              <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-            </div>
-            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-          </div>
-        </div>
-      </div>
-      <!-- Items 8 -->
-      <div class="w-[190px] sm:w-56 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 box-border mx-0.5 my-2 sm:mx-2 lg:mx-3 lg:my-3">
-        <a href="#">
-          <img class="p-2 rounded-t-lg" src="/image/IMG_8823.JPG" width="100%" alt="product image" />
-        </a>
-        <div class="px-2 pb-2">
-          <h3 class="text-slate-500 text-sm">T-Shirt</h3>
-          <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Roadwave T-Shirt Initial-D</h5>
-          </a>
-          <div class="flex items-center justify-between mt-2.5 mb-5 box-border">
-            <div class="flex justify-start items-start space-x-1 rtl:space-x-reverse flex-wrap">
-              <p class="text-[11px] sm:text-sm text-red-600">Rp</p>
-              <p class="text-[11px] sm:text-sm text-red-600">90.000</p>
-              <p class="text-[11px] sm:text-sm"><s>Rp</s></p>
-              <p class="text-[11px] sm:text-sm"><s>90.000</s></p>
-            </div>
-            <span class="bg-red-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2 box-border sm:text-sm">20%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Toogle  -->
-    <div class="py-20 flex justify-center">
-      <span class="text-sm text-slate-500 mr-2">Light</span>
-      <input type="checkbox" id="toggle" class="hidden" />
-      <label for="toggle">
-        <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-0.5 cursor-pointer">
-          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
-        </div>
-      </label>
-      <span class="text-sm text-slate-500 ml-2">Dark</span>
     </div>
 
     <!-- Footer  -->
 
     <footer class="bg-white dark:bg-gray-900 mb-16 sm:mb-0 px-5">
-      <div class="mx-auto w-full max-w-screen-xl">
+      <div class="mx-auto w-full max-w-screen-xl md:pb-14 lg:pb-0">
         <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div>
             <h2 class="mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">Collection</h2>
@@ -717,8 +565,8 @@
             </ul>
           </div>
         </div>
-        <div class="hidden px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-          <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">Roadwave™</a>. All Rights Reserved. </span>
+        <div class="hidden px-4 py-6 bg-[#343A40] dark:bg-gray-700 lg:flex lg:items-center lg:justify-between">
+          <span class="text-sm text-white dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">Roadwave™</a>. All Rights Reserved. </span>
           <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
               <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 30 30">
@@ -748,7 +596,6 @@
         </div>
       </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/cbaed131ab.js" crossorigin="anonymous"></script>
     <script>
